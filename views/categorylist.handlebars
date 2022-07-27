@@ -1,0 +1,14 @@
+<h4>{{name}}</h4>
+{{#each posts}}
+  <div class="card">
+    <div class="card-body">
+      <h2>{{title}}</h2>
+      <p>{{description}}</p>
+      <small>Slug: {{slug}}</small><br>
+      <small>Date: {{date}}</small><br>
+      <a href="/admin/posts/read/{{_id}}"><button class="btn btn-outline-light mt-2">Read More</button></a>
+    </div>
+  </div>  
+{{else}}
+  <h2>No posts resgistered with this category</h2>
+{{/each}}

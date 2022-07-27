@@ -1,0 +1,30 @@
+<style>
+  img#cattle{
+    margin-left: 200px;
+  }
+</style>
+<div class="bg-light p-5 rounded-lg m-3">
+  <h1 class="display-4">Welcome to the Blogapp</h1>
+  <p class="lead">This is a simple CRUD project, that works as a blog for games and technology related content/news</p>
+  <hr class="my-4">
+  <p>Create an account below and start writing posts today!</p>
+  <a class="btn btn-primary btn-lg" href="/users/register" role="button">Register an account</a>
+</div><br>
+<h2>Recent Posts: </h2>
+<hr>
+{{#each posts}}
+  <div class="card mt-2">
+    <div class="card-body">
+      <h4>{{title}}</h4>
+      <p>Description: {{description}}</p>
+      <hr>
+      <small>Slug: {{slug}}</small><br>
+      <small>Category: {{category.name}}</small><br>
+      <small>Date: {{date}}</small><br>
+      <a href="/admin/posts/read/{{_id}}"><button class="btn btn-outline-dark mt-2">Read more</button></a>
+    </div>
+  </div>
+{{else}}
+  <h4>No posts registered</h4>
+{{/each}}
+<img id='cattle'src="./img/gado.jpg" alt="gado" width="800px" height="300px" class="mt-5">

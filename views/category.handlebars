@@ -1,0 +1,13 @@
+<h2>Category list: </h2>
+<hr>
+{{#each category}}
+  <div class="card mt-2">
+    <div class="card-body">
+        <a href="/category/list/{{_id}}"><h4>{{name}}</h4></a>
+        <p>Slug: {{slug}}</p>
+        <small>Date: {{date}}</small>
+    </div>
+  </div>
+{{else}}
+  <h4>No category registered</h4>
+{{/each}}

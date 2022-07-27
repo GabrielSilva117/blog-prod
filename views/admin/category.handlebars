@@ -1,0 +1,17 @@
+<h2>Category list:</h2>
+<hr>
+<a href="/admin/category/add"><button class="btn btn-success">New Category</button></a>
+<hr>
+{{#each category}}
+<div class="card mt-2">
+  <div class="card-body">
+    <a href="/admin/category/list/{{_id}}"><h4>{{name}}</h4></a>
+    <p>Slug: {{slug}}</p> 
+    <small>Date: {{date}}</small><br>
+    <a href="/admin/category/edit/{{_id}}"><button class="btn btn-primary mt-3">Edit</button></a>
+    <a href="/admin/category/delete/{{_id}}"><button class="btn btn-primary mt-3 mx-2">Delete</button></a>
+  </div>
+</div>
+{{else}}
+  <h4>No category registered</h4>
+{{/each}}
