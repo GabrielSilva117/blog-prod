@@ -16,8 +16,8 @@ const Category = mongoose.model('category')
 const users = require('./routes/user')
 const passport = require('passport')
 require('./config/auth')(passport)
-
 const db = require('./config/db')
+
 //Config
   // Session
       app.use(session({
