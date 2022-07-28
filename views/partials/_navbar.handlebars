@@ -24,13 +24,13 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/category">Category</a>
-        </li>
-        {{/if}}
-        {{#if user}}
-        <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/posts">Posts</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/category">Category</a>
+        </li>
+        {{/if}}        
+        {{#if user}}
         <li class="nav-item">
           <a class='nav-link' href="/users/logout">Logout</a>
         </li>

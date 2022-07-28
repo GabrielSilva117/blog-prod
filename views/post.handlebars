@@ -9,8 +9,11 @@
 </style>
 <h2>Post page:</h2>
 <hr>
+{{#if user}}
 <a href="/posts/add"><button class="btn btn-outline-primary">New Post</button></a>
 <hr>
+{{else}}
+{{/if}}
 {{#each posts}}
 <div class="card mt-2">
   <div class="card-body">
