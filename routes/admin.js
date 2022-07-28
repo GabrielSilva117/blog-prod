@@ -145,7 +145,7 @@ router.post('/posts/new', iAdmin, (req, res) => {
   if(!req.body.content){
     error.push({text:'Invalid content'})
   }
-  if(req.body.category == 0){
+  if(req.body.category == 0 || req.body.category == -1){
     error.push({text:'Invalid category'})
   }
   if(error.length > 0){
@@ -198,7 +198,7 @@ router.post('/posts/edit', iAdmin, (req, res) => {
   if(!req.body.content){
     error.push({text:'Invalid content'})
   }
-  if(req.body.category == 0){
+  if(req.body.category == 0 || req.body.category == -1){
     error.push({text:'Invalid category'})
   }
   if(error.length > 0){
