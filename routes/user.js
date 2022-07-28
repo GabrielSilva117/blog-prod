@@ -47,7 +47,6 @@ router.post('/register/new', (req, res) => {
           name: req.body.name,
           email: req.body.email,
           password: req.body.password,
-          iAdmin: true
         }
     
         bcrypt.genSalt(10, (err, salt) => {
