@@ -12,7 +12,7 @@ const User = new Schema({
   },
   iAdmin:{
     type: Number,
-    default: 1
+    default: 0
   },
   password:{
     type: String,
