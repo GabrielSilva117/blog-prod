@@ -16,7 +16,8 @@
       <label for="content">Content:</label>
         <textarea type="text" name="content" class="form-control"  placeholder="Content text">{{posts.content}}</textarea>
       <label for="category" class="mt-2">Category: </label><br>
-      <select name="category" class="mt-2">
+      <select name="category" class="select-form mt-2">
+        <option selected value="-1">Select a category</option>
         {{#each category}}
           <option value="{{_id}}">{{name}}</option>
         {{else}}

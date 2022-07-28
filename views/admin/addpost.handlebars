@@ -15,7 +15,8 @@
       <label for="content">Content: </label>
         <textarea name="content" class="form-control"></textarea>
       <label for="category">Category: </label>
-        <select name="category" class="custom-select mt-3 my-2">
+        <select name="category" class="form-select">
+          <option selected value="-1">Select a category</option>
           {{#each category}}
           <option value="{{_id}}">{{name}}</option>
           {{else}}
